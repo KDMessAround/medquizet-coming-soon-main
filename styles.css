@@ -1,0 +1,307 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2.25rem;
+}
+
+body {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-height: 100vh;
+  background-color: white;
+  background: url('coming_soon.png') no-repeat center center;
+  background-size: cover;
+  color: #77c4ff;
+  overflow: auto;
+  padding: 20px;
+}
+
+.logo{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 200px;
+  max-width: 150px;
+  height: auto;
+  z-index: 100;
+}
+
+.flip-card {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 0.1em;
+}
+
+.top,
+.bottom,
+.flip-card .top-flip,
+.flip-card .bottom-flip {
+  height: 0.75em;
+  line-height: 1;
+  padding: 0.25em;
+  overflow: hidden;
+}
+
+.top,
+.flip-card .top-flip {
+  background-color: #f7f7f7;
+  border-top-right-radius: 0.1em;
+  border-top-left-radius: 0.1em;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.bottom,
+.flip-card .bottom-flip {
+  background-color: white;
+  display: flex;
+  align-items: flex-end;
+  border-bottom-right-radius: 0.1em;
+  border-bottom-left-radius: 0.1em;
+}
+
+.flip-card .top-flip {
+  position: absolute;
+  width: 100%;
+  animation: flip-top 250ms ease-in;
+  transform-origin: bottom;
+}
+
+@keyframes flip-top {
+  100% {
+    transform: rotateX(90deg);
+  }
+}
+
+.flip-card .bottom-flip {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  animation: flip-bottom 250ms ease-out 250ms;
+  transform-origin: top;
+  transform: rotateX(90deg);
+}
+
+@keyframes flip-bottom {
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  justify-content: center;
+  text-align: center;
+  min-width: clamp(300px, 80%, 900px);
+  max-width: clamp(600px, 90%, 1200px);
+  
+}
+
+.container-segment {
+ display: flex;
+  flex-direction: column;
+  gap: 0.1em;
+  align-items: center;
+  transform: translateY(0.3em);
+}
+
+.segment {
+  display: flex;
+  gap: 0.1em;
+}
+
+.segment-title {
+  font-size: 1rem;
+  color: black;
+}
+
+.text-segment{
+  margin-top: 1.2em;
+}
+
+p,a {
+  font-size: 0.75rem;
+  color: black;
+}
+
+
+a{
+  text-decoration: none;
+}
+
+.button {
+  display: inline-block;
+  font-size: 1em;
+  width: 80%;
+  max-width: 300px;
+  margin: 1em auto;
+  padding: 8px 20px;
+  border-radius: 6px;
+  border: 1px solid #8ec6ff;
+  background: linear-gradient(to bottom, #a9d2ff, #33abff);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  background-color: #33abff;
+  color: #f3f3f3;  
+  text-decoration: none;
+}
+
+.button:hover {
+    background: linear-gradient(to bottom, #91c1ff, #33abff); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    border-color: #7ab1ff;
+    font-size: 1.2em;
+}
+
+.button:active {
+  transform: translateY(1px);
+  box-shadow: 0 5px 5px 0 rgba(0,0,0,0.1s);
+}
+
+.social-icons {
+  position: absolute;
+  bottom: -0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+
+}
+
+.social-icons img{
+  width: 1rem;
+  height: 1rem;
+  transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out;
+}
+
+.social-icons img:hover{
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+
+.social-icons a:hover{
+  transition: filter 0.5s ease;
+}
+
+.telegram:hover {
+  box-shadow: 0 0 1rem rgba(51,171,255,0.7);
+}
+
+.instagram:hover {
+  box-shadow: 0 0 1rem rgba(244, 28, 215, 0.7);
+  
+}
+
+.tiktok:hover{
+  box-shadow: 0 0 1.1rem rgba(0, 2, 4, 0.7);
+  
+}
+
+.youtube:hover {
+  box-shadow: 0 0 1rem rgba(226, 5, 5, 0.989);
+  
+}
+
+.social-icons a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 1rem;
+  height: 1rem;
+  margin: 0;
+  transition: all 0.5s ease;
+  background: transparent;
+    
+}
+
+
+
+
+
+@media (max-width: 768px){
+ * {
+  font-size: 1.8rem;
+}
+  body{
+    background-color: white;
+    background-image: none;
+    padding: 40px;
+  }
+  .logo{
+    width: 3.5rem;
+    top: 5px;
+    left: 5px;
+  }
+  .container{
+    flex-direction: column;
+    align-items: center;
+    min-width: 90%;
+  }
+  .segment-title{
+    font-size: 0.8rem;
+  }
+  p,a {
+    font-size: 0.65rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+      transform: scale(0.8);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  body{
+    background-color: white;
+    background-image: none;
+    padding: 40px;
+  }
+  .container {
+    
+      width: 90%;
+      min-width: clamp(500px, 90%, 800px); 
+      max-width: 800px;
+      gap: 0.8em; 
+  }
+
+  .segment-title{
+      font-size: 1.2rem;
+  }
+
+  p, a{
+      font-size: 0.9rem;
+  }
+
+  .flip-card{
+      transform: scale(1.1);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .container {
+      flex-direction: column;
+      align-items: center;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .container{
+      flex-direction: row;
+  }
+}
