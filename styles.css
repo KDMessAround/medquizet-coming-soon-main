@@ -273,11 +273,17 @@ a{
     padding: 40px;
   }
   .container {
-    
+      display: grid; 
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto; 
       width: 90%;
-      min-width: clamp(500px, 90%, 800px); 
+      min-width: clamp(500px, 90%, 800px);
       max-width: 800px;
       gap: 0.8em; 
+  }
+
+  .container-segment{
+    align-items: center;
   }
 
   .segment-title{
@@ -288,8 +294,14 @@ a{
       font-size: 0.9rem;
   }
 
-  .flip-card{
-      transform: scale(1.1);
+  .text-segment {
+    grid-column: 1 / -1; 
+    text-align: center; 
+  }
+
+  .button{
+    grid-column: 1 / -1; 
+    text-align: center; 
   }
 }
 
