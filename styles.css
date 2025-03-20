@@ -13,7 +13,7 @@ body {
   position: relative;
   min-height: 100vh;
   background-color: white;
-  background: url('coming_soon.png') no-repeat center center;
+  background: url('images/coming_soon.png') no-repeat center center;
   background-size: cover;
   color: #77c4ff;
   overflow: auto;
