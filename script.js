@@ -1,4 +1,4 @@
-const targetDate = new Date(2025, 3, 12, 14, 0, 0);
+const targetDate = new Date(2025, 11, 12, 14, 0, 0);
 let previousTimeBetweenDates;
 setInterval(() => {
   const currentDate = new Date();
